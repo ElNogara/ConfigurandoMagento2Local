@@ -15,10 +15,11 @@ Magento 2 será necessário instalar o MySQL 8.x para que funcione corretamente.
 Estarei utilizando o Apache2.4 nesse passo a passo...
 
 <h4>Local do Magento</h4>
-Dentro do servidor crie a pasta onde ficara hospedada a plataforma, no meu caso será nogaramagento então dentro de /var/www/html/ estarei criando a pasta nogaramagento/
+Dentro do servidor crie a pasta onde ficara hospedada a plataforma, no meu caso será nogaramagento então dentro de /var/www/html/ estarei criando a pasta nogaramagento/public_html
 
 ```
 sudo mkdir /var/www/html/nogaramagento/
+sudo mkdir /var/www/html/nogaramagento/public_html
 ```
 
 Para garantir que ocorra corretamente, vou alterar as permissões dessa pasta para meu usuário e também dar um 755 para alterar as permissões de acesso, execução e alteração.
@@ -48,17 +49,22 @@ Para configurar uma página no servidor devemos criar os virtuais hosts, sendo a
 </VirtualHost>
 ```
 
-Agora ative a página 
+Ative a página:
 
 ```
 sudo a2ensite nogaramagento.com.conf
 ``` 
 
-<h4>Criar redirect no arquivo hosts(Apenas para configuração em servidor local)</h4>
+<h4>Redirect arquivo hosts(Apenas para configuração em servidor local)</h4>
 Caso esteja subindo o magento na sua máquina local será necessário criar um redirecionamento no seu arquivo hosts para seu VirtualHost criado no seu servidor interno. Com isso, acesse o arquivo /etc/hosts e no final de tudo insira o código:
 
 ```
 127.0.2.1 nogaramagento.com
 ```
+
+<h2>Instalando o Magento.</h2>
+
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition:2.4.5 /var/www/html/nogaramagento/public_html/
+
 <strong>Espero muito ter ajudado. Mas qualquer dúvida estou a disposição - <a href="https://wellingtonnogara.com/" style="color: red;">Wellington Nogara</a>.</strong>
 
