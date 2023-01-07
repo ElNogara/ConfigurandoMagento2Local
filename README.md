@@ -22,7 +22,7 @@ sudo mkdir /var/www/html/nogaramagento/
 sudo mkdir /var/www/html/nogaramagento/public_html
 ```
 
-Para garantir que ocorra corretamente, vou alterar as permissões dessa pasta para meu usuário e também dar um 755 para alterar as permissões de visualização, alteraçexecução.
+Para garantir que ocorra corretamente, vou alterar as permissões dessa pasta para meu usuário e também dar um 755 para alterar as permissões de visualização, alteraçao e execução.
 ```
 sudo chown -R $USER:$USER /var/www/html/nogaramagento/
 sudo chmod -R 755 /var/www/html/nogaramagento/
