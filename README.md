@@ -1,4 +1,4 @@
-<h1>Instalar Magento 2.4</h1>
+<h1>Instalar Magento 2.4.5</h1>
 Documentando passo a passo de como subir Magento 2.4 na sua máquina.<br>
 
 <h2>Configurando sua máquina.</h2>
